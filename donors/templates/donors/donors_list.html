@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donor List</title>
+</head>
+<body>
+    <h1>Donor List</h1>
+    <ul>
+        {% for donor in donors %}
+        <li>{{ donor.first_name }} {{ donor.last_name }} - {{ donor.blood_type.name }}</li>
+        {% empty %}
+        <li>No donors available</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

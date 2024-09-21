@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Request List</title>
+</head>
+<body>
+    <h1>Blood Request</h1>
+    <ul>
+        {% for request in requests %}
+        <li>{{ request.blood_type.name }} - {{ request.quantity }} pints needed at {{ request.hospital }}</li>
+        {% empty %}
+        <li>No requests available</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
